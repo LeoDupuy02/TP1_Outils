@@ -1,0 +1,34 @@
+TP1 : Plus de commandes et git
+Réalisé par : Léo Dupuy EI-3A FISA
+
+Exercice 1 :
+2 - La commande git config a créé un fichier .git.
+4 - Il est indiqué que je me trouve actuellement sur la branche master et qu'aucun commit (sauvegarde de version) n'a été faite depuis. Il est indiqué que le fichier que je viens de créer n'est pas suivi (n'a pas été commité).
+7 - Le statut est à jour : aucun fichier n'est pas suivi. Mon fichier créé précédemment vient d'être ajouté à la liste des commit de la branche main.
+8 - La commande retourne l'ensemble des commits précédemment réalisés sur la branche active. Elle indique l'identifiant SHA du commit, l'auteur, la date du commit, le message si celui-ci existe.
+9 - git diff semble être un alias pour la commande bash diff --git qui compare deux versions d'un fichier.
+11 - Le dépôt distant donne différentes informations sur le projet comme les pull request, les issues, les clefs ssh pour cloner le repo, un wikin un insight sur les différentes branches..
+En appliquant la procédure du push mise en avant lors de la création d'un repository GitHub je retrouve mes fichiers créés en local dans mon repo.
+
+Exercice 2 :
+2 - Le répertoire tp1_ex2 a été créé.
+3 - La commande git status retourne que nous somme sur la branche main et que tout est à jour.
+6 - Lors du push (après add et commit) il est indiqué que 3 objets ont été écrits. J'étais le premier à pusher mes fichiers. Les autres membres du groupe de TP doivent faire un pull pour mettre à jour leur repo local avant de pouvoir pusher.
+7 - git pull permet de copier le dépôt distant. Il faut ensuite enchaîner avec git commit pour pouvoir terminer la fusion.
+12 - J'étais le premier à ajouter des modification donc rien ne s'est passé. Dans le cas de mon voisin il n'y a rien eu non plus : github choisi d'écraser ou d'ajouter les lignes de code selon son bon vouloir.
+
+Exercice 3 :
+1 - Le &. Exemple : sh ./mon_script.sh &.
+2 - Il s'appelle "/"
+3 - La commande "cd" permet toujours de retourner à la racine.
+4 - Cette commande permet de lister les dossiers à la racine de son compte ainsi que les fichiers et dossiers enfants.
+5 - cp ~/TP/TP1/ex2.c ~/Images/IMG216.jpg ./
+6 - Il est possible d'ajouter le chemin du répertoire a.out dans la variable PATH (en modifiant ~/bashrc) ou de mettre le fichier en question dans un répertoire déjà contenu dans la variable PATH.
+7 - Le résultat est 1 : On compte le nombre de ligne de la chaîne de caractères avant de l'afficher.
+8 - Il est possible d'ajouter 2> /dev/null pour diriger stderr vers le fichier /dev/null.
+9 - Le ps -ef affiche tous les processus avec le format complet. grep -c VAL affiche le nombre de ligne  matchant avec VAL. | est un pip.
+La commande permet donc d'afficher le nombre de processus dont les détails contiennent la chaîne de caractères evince.
+10 - La première et la seconde réponse sont correcte. La troisième donne les autorisations aux others ce que l'on ne souhaite pas. Même chose pour la quatrième et dernière qui autorise tout à tous les utilisateurs.
+11 - Nous prenons ici en compte que TOUS les champs sont séparés par des tabulations et que le fichier csv décrit se situe bien dans ../../../list_main3_2023_2024.csv. La commande cut -f1,5 va retourner uniquement les colonnes 1 et 5 soit l'identifiant (ex : 3810335) et l'état de l'inscription (ex: Non). grep Non va sélectionner uniquement les lignes contenant Non.
+La commande va donc retourner uniquement les colonnes 1 et 5 des lignes 2,6,8,9,10 (les lignes où on peut trouver Non).
+
